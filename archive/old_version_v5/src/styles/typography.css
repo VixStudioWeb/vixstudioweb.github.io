@@ -1,0 +1,70 @@
+/* Typography — Space Grotesk + Inter */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--color-white);
+}
+
+h1 {
+  font-size: clamp(3rem, 8vw, 7rem);
+}
+
+h2 {
+  font-size: clamp(2rem, 5vw, 4rem);
+}
+
+h3 {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+h4 {
+  font-size: clamp(1.2rem, 2vw, 1.8rem);
+}
+
+p, span, a, li, label, input, textarea, button {
+  font-family: 'Inter', sans-serif;
+}
+
+p {
+  font-size: clamp(1rem, 1.2vw, 1.25rem);
+  line-height: 1.7;
+  color: var(--color-gray-light);
+  font-weight: 300;
+}
+
+a {
+  color: var(--color-yellow);
+  text-decoration: none;
+  transition: color 0.3s var(--ease-out-quart);
+}
+
+a:hover {
+  color: var(--color-yellow-light);
+}
+
+.text-accent {
+  color: var(--color-yellow);
+}
+
+.text-white {
+  color: var(--color-white);
+}
+
+.text-reveal {
+  overflow: hidden;
+  display: inline-block;
+}
+
+.text-reveal span {
+  display: inline-block;
+  transform: translateY(110%);
+  will-change: transform;
+}
+
+.text-split-char {
+  display: inline-block;
+  will-change: transform, opacity;
+}

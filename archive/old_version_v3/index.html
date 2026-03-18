@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vix Studio — L'excellence digitale, par nature</title>
+  <meta name="description" content="Vix Studio conçoit des expériences web immersives et haut de gamme. Design, développement et stratégie digitale sur-mesure.">
+  <meta name="theme-color" content="#050510">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/logo.png" type="image/png">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js" defer></script>
+
+  <!-- App Scripts -->
+  <script src="js/cursor.js" defer></script>
+  <script src="js/particles.js" defer></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+
+  <!-- Scroll Progress -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-outline" id="cursorOutline"></div>
+  <canvas class="cursor-trail-canvas" id="cursorTrail"></canvas>
+
+  <!-- Loader -->
+  <div class="loader" id="loader">
+    <img src="images/logo.png" alt="Vix Studio" class="loader-logo" id="loaderLogo">
+    <div class="loader-bar-track" id="loaderBarTrack">
+      <div class="loader-bar" id="loaderBar"></div>
+    </div>
+    <div class="loader-text" id="loaderText">Chargement de l'expérience</div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav" role="navigation" aria-label="Navigation principale">
+    <a href="#hero" class="nav-logo magnetic-btn" aria-label="Accueil">
+      <img src="images/logo.png" alt="Vix Studio Logo">
+      <span>VIX STUDIO</span>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="#intro" class="nav-link magnetic-btn" data-section="intro">À propos</a>
+      <a href="#services" class="nav-link magnetic-btn" data-section="services">Services</a>
+      <a href="#portfolio" class="nav-link magnetic-btn" data-section="portfolio">Portfolio</a>
+      <a href="#process" class="nav-link magnetic-btn" data-section="process">Processus</a>
+      <a href="#contact" class="nav-cta magnetic-btn" data-section="contact">Contact</a>
+    </div>
+    <button class="nav-toggle magnetic-btn" id="navToggle" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- ============================
+       SECTION 1 — Vertical Scroll
+       ============================ -->
+
+  <!-- Hero -->
+  <section class="hero section" id="hero">
+    <div class="hero-bg">
+      <div class="hero-bg-gradient"></div>
+      <div class="hero-bg-texture"></div>
+      <div class="hero-bg-vignette"></div>
+    </div>
+
+    <img src="images/cheetah.png" alt="" class="hero-cheetah" aria-hidden="true" data-speed="0.3">
+
+    <div class="hero-content">
+      <div class="hero-badge" id="heroBadge">
+        <span class="dot"></span>
+        Studio créatif digital
+      </div>
+
+      <h1 class="hero-title" id="heroTitle">
+        <span class="line"><span class="line-inner">L'excellence</span></span>
+        <span class="line"><span class="line-inner"><span class="gradient-text">digitale,</span></span></span>
+        <span class="line"><span class="line-inner">par nature.</span></span>
+      </h1>
+
+      <p class="hero-subtitle" id="heroSubtitle">
+        Nous concevons des expériences web immersives qui captivent, engagent et transforment votre vision en réalité digitale.
+      </p>
+
+      <div class="hero-cta-group" id="heroCta">
+        <a href="#portfolio" class="btn-primary magnetic-btn">Voir nos projets</a>
+        <a href="#contact" class="btn-secondary magnetic-btn">Nous contacter</a>
+      </div>
+    </div>
+
+    <div class="hero-scroll-indicator" id="heroScroll">
+      <span>Explorer</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <section class="intro section" id="intro">
+    <div class="intro-grid">
+      <div class="intro-text">
+        <h2 class="reveal">Nous transformons<br>votre <span class="gradient-text">vision</span></h2>
+        <p class="reveal">Vix Studio est un collectif de créateurs passionnés qui conçoivent des expériences digitales d'exception. Chaque projet est une œuvre unique, pensée pour sublimer votre marque.</p>
+        <p class="reveal">Notre approche mêle design audacieux, technologie de pointe et stratégie intelligente pour créer des produits qui marquent les esprits.</p>
+      </div>
+
+      <div class="intro-stats">
+        <div class="stat-card reveal">
+          <div class="stat-number" data-count="50">0</div>
+          <div class="stat-label">Projets livrés</div>
+        </div>
+        <div class="stat-card reveal">
+          <div class="stat-number" data-count="30">0</div>
+          <div class="stat-label">Clients satisfaits</div>
+        </div>
+        <div class="stat-card reveal">
+          <div class="stat-number" data-count="5">0</div>
+          <div class="stat-label">Années d'expertise</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Expertise -->
+  <section class="expertise section" id="expertise">
+    <div class="expertise-header">
+      <h2 class="reveal">Notre <span class="gradient-text">Expertise</span></h2>
+      <p class="reveal">Trois piliers pour des projets d'exception</p>
+    </div>
+
+    <div class="expertise-grid">
+      <div class="expertise-card reveal" style="--card-accent: var(--accent-1)">
+        <div class="expertise-icon">🎨</div>
+        <h3>Design</h3>
+        <p>Des interfaces élégantes et intuitives qui subliment votre identité. Chaque pixel est pensé pour créer une expérience mémorable.</p>
+      </div>
+      <div class="expertise-card reveal" style="--card-accent: var(--accent-2)">
+        <div class="expertise-icon">⚡</div>
+        <h3>Développement</h3>
+        <p>Du code sur-mesure, performant et évolutif. Nous construisons des solutions techniques qui repoussent les limites du web.</p>
+      </div>
+      <div class="expertise-card reveal" style="--card-accent: var(--accent-4)">
+        <div class="expertise-icon">🧭</div>
+        <h3>Stratégie</h3>
+        <p>Une vision claire pour une présence digitale percutante. Nous alignons technologie et objectifs business pour maximiser votre impact.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ============================
+       SECTION 2 — Horizontal Left
+       ============================ -->
+
+  <section class="horizontal-section services-section section" id="services">
+    <div class="timeline-line"></div>
+    <div class="horizontal-track" id="servicesTrack">
+
+      <!-- Panel 1 - Intro -->
+      <div class="h-panel panel-intro">
+        <div class="timeline-dot"></div>
+        <div class="panel-number">01</div>
+        <div class="panel-inner">
+          <div class="panel-text">
+            <div class="panel-tag">Notre approche</div>
+            <h2>Chaque projet est<br>un <span class="gradient-text">voyage</span></h2>
+            <p>De l'idée au lancement, nous vous accompagnons à chaque étape avec une méthodologie éprouvée et une passion sans compromis.</p>
+          </div>
+          <div class="panel-visual">
+            <div class="visual-glass">
+              <div class="inner">🚀</div>
+            </div>
+          </div>
+        </div>
+        <div class="panel-decoration blue"></div>
+      </div>
+
+      <!-- Panel 2 - Strategy -->
+      <div class="h-panel">
+        <div class="timeline-dot"></div>
+        <div class="panel-number">02</div>
+        <div class="panel-inner">
+          <div class="panel-visual">
+            <div class="visual-glass" style="--accent: var(--accent-2)">
+              <div class="inner">🎯</div>
+            </div>
+          </div>
+          <div class="panel-text">
+            <div class="panel-tag">Stratégie & Conseil</div>
+            <h2>Comprendre pour<br><span class="gradient-text">exceller</span></h2>
+            <p>Analyse approfondie de votre marché, audit de votre présence digitale et définition d'une stratégie sur-mesure.</p>
+            <div class="panel-features">
+              <div class="panel-feature"><span class="check">✓</span> Audit & analyse concurrentielle</div>
+              <div class="panel-feature"><span class="check">✓</span> Positionnement de marque</div>
+              <div class="panel-feature"><span class="check">✓</span> Roadmap stratégique</div>
+            </div>
+          </div>
+        </div>
+        <div class="panel-decoration purple"></div>
+      </div>
+
+      <!-- Panel 3 - Design -->
+      <div class="h-panel">
+        <div class="timeline-dot"></div>
+        <div class="panel-number">03</div>
+        <div class="panel-inner">
+          <div class="panel-text">
+            <div class="panel-tag">Design & Création</div>
+            <h2>L'art au service<br>de l'<span class="gradient-text">expérience</span></h2>
+            <p>Des interfaces qui racontent votre histoire. Chaque interaction est chorégraphiée pour surprendre et séduire.</p>
+            <div class="panel-features">
+              <div class="panel-feature"><span class="check">✓</span> UX Research & Wireframing</div>
+              <div class="panel-feature"><span class="check">✓</span> UI Design haute fidélité</div>
+              <div class="panel-feature"><span class="check">✓</span> Prototypage interactif</div>
+            </div>
+          </div>
+          <div class="panel-visual">
+            <div class="visual-glass">
+              <div class="inner">✨</div>
+            </div>
+          </div>
+        </div>
+        <div class="panel-decoration blue"></div>
+      </div>
+
+      <!-- Panel 4 - Dev -->
+      <div class="h-panel">
+        <div class="timeline-dot"></div>
+        <div class="panel-number">04</div>
+        <div class="panel-inner">
+          <div class="panel-visual">
+            <div class="visual-glass">
+              <div class="inner">⚙️</div>
+            </div>
+          </div>
+          <div class="panel-text">
+            <div class="panel-tag">Développement & Innovation</div>
+            <h2>La technologie<br>au <span class="gradient-text">sommet</span></h2>
+            <p>Code sur-mesure avec les frameworks les plus performants. Chaque ligne est optimisée pour la vitesse et la scalabilité.</p>
+            <div class="panel-features">
+              <div class="panel-feature"><span class="check">✓</span> Développement frontend avancé</div>
+              <div class="panel-feature"><span class="check">✓</span> Backend & API robustes</div>
+              <div class="panel-feature"><span class="check">✓</span> Performance & SEO</div>
+            </div>
+          </div>
+        </div>
+        <div class="panel-decoration purple"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ============================
+       SECTION 3 — Vertical (Portfolio)
+       ============================ -->
+
+  <section class="portfolio section" id="portfolio">
+    <div class="portfolio-header">
+      <h2 class="reveal">Nos <span class="gradient-text" style="background: linear-gradient(135deg, var(--accent-3), var(--accent-5)); -webkit-background-clip: text; background-clip: text;">Réalisations</span></h2>
+      <p class="reveal">Des projets qui repoussent les limites du digital</p>
+    </div>
+
+    <div class="portfolio-grid">
+      <div class="portfolio-card reveal" data-project="coursebabets">
+        <div class="portfolio-card-image">
+          <img src="images/portfolio/coursebabets/coursebabets_frontpage.png" alt="CourseBabets — Application de courses hippiques" loading="lazy">
+          <div class="portfolio-card-overlay"></div>
+        </div>
+        <div class="portfolio-card-info">
+          <h3>CourseBabets</h3>
+          <p>Plateforme immersive de courses hippiques avec expérience temps réel</p>
+          <div class="portfolio-card-tags">
+            <span class="portfolio-tag">Web App</span>
+            <span class="portfolio-tag">UX/UI</span>
+            <span class="portfolio-tag">Temps réel</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-card reveal" data-project="nebula">
+        <div class="portfolio-card-image">
+          <img src="images/portfolio/coursebabets/coursebabets_closeup.png" alt="CourseBabets — Vue détaillée" loading="lazy">
+          <div class="portfolio-card-overlay"></div>
+        </div>
+        <div class="portfolio-card-info">
+          <h3>CourseBabets — Détails</h3>
+          <p>Interfaces de pari en direct et tableaux de bord analytiques</p>
+          <div class="portfolio-card-tags">
+            <span class="portfolio-tag">Dashboard</span>
+            <span class="portfolio-tag">Data Viz</span>
+            <span class="portfolio-tag">Performance</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-card reveal" data-project="aura">
+        <div class="portfolio-card-image" style="background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460); aspect-ratio: 16/10; display: flex; align-items: center; justify-content: center;">
+          <div style="text-align: center; padding: 40px;">
+            <div style="font-size: 3rem; margin-bottom: 16px;">🌐</div>
+            <div style="font-family: 'Space Grotesk', sans-serif; font-size: 1.5rem; font-weight: 600;">Projet Aura</div>
+          </div>
+          <div class="portfolio-card-overlay"></div>
+        </div>
+        <div class="portfolio-card-info">
+          <h3>Projet Aura</h3>
+          <p>Plateforme SaaS avec interface immersive et intelligence artificielle intégrée</p>
+          <div class="portfolio-card-tags">
+            <span class="portfolio-tag">SaaS</span>
+            <span class="portfolio-tag">AI</span>
+            <span class="portfolio-tag">Full Stack</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-card reveal" data-project="echo">
+        <div class="portfolio-card-image" style="background: linear-gradient(135deg, #0c0c1d, #1a0a2e, #2d1b69); aspect-ratio: 16/10; display: flex; align-items: center; justify-content: center;">
+          <div style="text-align: center; padding: 40px;">
+            <div style="font-size: 3rem; margin-bottom: 16px;">🎵</div>
+            <div style="font-family: 'Space Grotesk', sans-serif; font-size: 1.5rem; font-weight: 600;">Echo Sound</div>
+          </div>
+          <div class="portfolio-card-overlay"></div>
+        </div>
+        <div class="portfolio-card-info">
+          <h3>Echo Sound</h3>
+          <p>Application de streaming musical avec visualisation audio en temps réel</p>
+          <div class="portfolio-card-tags">
+            <span class="portfolio-tag">Web Audio</span>
+            <span class="portfolio-tag">WebGL</span>
+            <span class="portfolio-tag">PWA</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Expanded View -->
+  <div class="portfolio-expanded" id="portfolioExpanded">
+    <div class="portfolio-expanded-backdrop" id="portfolioExpandedBackdrop"></div>
+    <div class="portfolio-expanded-content" id="portfolioExpandedContent">
+      <button class="portfolio-expanded-close magnetic-btn" id="portfolioExpandedClose">✕</button>
+      <div id="portfolioExpandedInner"></div>
+    </div>
+  </div>
+
+  <!-- ============================
+       PARTICLES SECTION
+       ============================ -->
+
+  <section class="particles-section section" id="particles">
+    <canvas class="particles-canvas" id="particlesCanvas"></canvas>
+
+    <div class="particles-title">
+      <h2>L'univers Vix</h2>
+      <p>Explorez. Jouez. Contemplez.</p>
+    </div>
+
+    <div class="particles-instructions">
+      <div class="particles-instruction">
+        <span class="key">Clic</span> Explosion
+      </div>
+      <div class="particles-instruction">
+        <span class="key">Maintien</span> Gravité
+      </div>
+      <div class="particles-instruction">
+        <span class="key">Mouvement</span> Traînées
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ============================
+       SECTION 4 — Horizontal Right
+       ============================ -->
+
+  <section class="horizontal-section process-section section" id="process">
+    <div class="horizontal-track" id="processTrack">
+
+      <!-- Panel 1 -->
+      <div class="h-panel">
+        <div class="panel-number">I</div>
+        <div class="depth-layer back" style="left: 20%; top: 20%;" data-depth-speed="0.05"></div>
+        <div class="depth-layer front" style="right: 15%; bottom: 25%;" data-depth-speed="0.15"></div>
+        <div class="panel-inner">
+          <div class="panel-text">
+            <div class="panel-tag" style="color: var(--accent-4);">Phase 1</div>
+            <h2>Découverte &<br><span class="gradient-text" style="background: linear-gradient(135deg, var(--accent-4), var(--accent-1)); -webkit-background-clip: text; background-clip: text;">Immersion</span></h2>
+            <p>Nous plongeons dans votre univers. Compréhension profonde de vos enjeux, vos utilisateurs et votre vision pour poser les fondations d'un projet exceptionnel.</p>
+          </div>
+          <div class="panel-visual">
+            <div class="process-panel-visual">
+              <div class="ring ring-1"></div>
+              <div class="ring ring-2"></div>
+              <div class="ring ring-3"></div>
+              <div class="process-center-icon">🔍</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Panel 2 -->
+      <div class="h-panel">
+        <div class="panel-number">II</div>
+        <div class="depth-layer back" style="left: 60%; top: 10%;" data-depth-speed="0.08"></div>
+        <div class="depth-layer front" style="left: 10%; bottom: 15%;" data-depth-speed="0.12"></div>
+        <div class="panel-inner">
+          <div class="panel-visual">
+            <div class="process-panel-visual">
+              <div class="ring ring-1"></div>
+              <div class="ring ring-2"></div>
+              <div class="ring ring-3"></div>
+              <div class="process-center-icon">🏗️</div>
+            </div>
+          </div>
+          <div class="panel-text">
+            <div class="panel-tag" style="color: var(--accent-4);">Phase 2</div>
+            <h2>Conception &<br><span class="gradient-text" style="background: linear-gradient(135deg, var(--accent-4), var(--accent-1)); -webkit-background-clip: text; background-clip: text;">Architecture</span></h2>
+            <p>Wireframes, prototypes et design system. Chaque élément est pensé, testé et validé avant de passer en production.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Panel 3 -->
+      <div class="h-panel">
+        <div class="panel-number">III</div>
+        <div class="depth-layer back" style="right: 20%; top: 30%;" data-depth-speed="0.06"></div>
+        <div class="depth-layer front" style="left: 30%; top: 10%;" data-depth-speed="0.14"></div>
+        <div class="panel-inner">
+          <div class="panel-text">
+            <div class="panel-tag" style="color: var(--accent-4);">Phase 3</div>
+            <h2>Développement &<br><span class="gradient-text" style="background: linear-gradient(135deg, var(--accent-4), var(--accent-1)); -webkit-background-clip: text; background-clip: text;">Craft</span></h2>
+            <p>Du code artisanal et performant. Sprints agiles, revues de code et tests rigoureux pour un résultat impeccable.</p>
+          </div>
+          <div class="panel-visual">
+            <div class="process-panel-visual">
+              <div class="ring ring-1"></div>
+              <div class="ring ring-2"></div>
+              <div class="ring ring-3"></div>
+              <div class="process-center-icon">💻</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Panel 4 -->
+      <div class="h-panel">
+        <div class="panel-number">IV</div>
+        <div class="depth-layer back" style="left: 40%; bottom: 20%;" data-depth-speed="0.07"></div>
+        <div class="depth-layer front" style="right: 25%; top: 15%;" data-depth-speed="0.13"></div>
+        <div class="panel-inner">
+          <div class="panel-visual">
+            <div class="process-panel-visual">
+              <div class="ring ring-1"></div>
+              <div class="ring ring-2"></div>
+              <div class="ring ring-3"></div>
+              <div class="process-center-icon">🚀</div>
+            </div>
+          </div>
+          <div class="panel-text">
+            <div class="panel-tag" style="color: var(--accent-4);">Phase 4</div>
+            <h2>Lancement &<br><span class="gradient-text" style="background: linear-gradient(135deg, var(--accent-4), var(--accent-1)); -webkit-background-clip: text; background-clip: text;">Évolution</span></h2>
+            <p>Déploiement optimisé, monitoring des performances et accompagnement continu. Votre projet évolue avec vous.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ============================
+       CONTACT
+       ============================ -->
+
+  <section class="contact section" id="contact">
+    <div class="contact-bg"></div>
+    <div class="contact-content">
+      <h2 class="reveal">Prêt à créer quelque chose<br>d'<span class="gradient-text">extraordinaire</span> ?</h2>
+      <p class="reveal">Chaque grand projet commence par une conversation. Parlons du vôtre.</p>
+      <a href="mailto:contact@vixstudio.fr" class="contact-cta magnetic-btn reveal">
+        Lancer votre projet
+        <span class="arrow">→</span>
+      </a>
+
+      <div class="contact-details reveal">
+        <div class="contact-detail">
+          <div class="contact-detail-label">Email</div>
+          <div class="contact-detail-value">contact@vixstudio.fr</div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-label">Localisation</div>
+          <div class="contact-detail-value">Paris, France</div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-label">Disponibilité</div>
+          <div class="contact-detail-value">Ouvert aux projets</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-left">
+      <img src="images/logo.png" alt="Vix Studio">
+      <span>© 2026 Vix Studio. Tous droits réservés.</span>
+    </div>
+    <div class="footer-right">
+      Conçu avec passion à Paris
+    </div>
+  </footer>
+
+</body>
+</html>

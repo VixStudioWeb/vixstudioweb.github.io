@@ -1,0 +1,3 @@
+PyVolley est un projet ayant pour but de donner accès de façon gratuite et extrêmement simplifiée à toutes les statistiques des matchs fédéraux en France. Le site permet une exploration dans une base de donnée, la recherche de club, joueurs, arbitres, équipes. Le site est très intuitif et clair.
+
+Le thème du site est principalement noir, bleu et légèrement rouge avec un design plutôt géométrique.

@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vix Studio Web - Création et rénovation de sites web professionnels. Design moderne, sécurité, accessibilité et optimisation mobile.">
+    <meta name="keywords" content="création site web, design web, développement web, site responsive, accessibilité web">
+    <meta name="author" content="Vix Studio Web">
+    <meta name="theme-color" content="#F5C518">
+    
+    <title>Vix Studio Web | Création de Sites Web Professionnels</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Loader -->
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <div class="loader-logo">
+                <span class="loader-vix">Vix</span>
+                <span class="loader-studio">Studio Web</span>
+            </div>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cursor personnalisé -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursor-follower"></div>
+
+    <!-- Navigation -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav-logo">
+                <span class="logo-vix">Vix</span>
+                <span class="logo-studio">Studio Web</span>
+            </a>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="#accueil" class="nav-link active">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#services" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#portfolio" class="nav-link">Réalisations</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#processus" class="nav-link">Processus</a>
+                </li>
+                <li class="nav-item">
+                    <a href="equipe.html" class="nav-link">Équipe</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link nav-cta">Démarrer un projet</a>
+                </li>
+            </ul>
+            
+            <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+                <span class="hamburger"></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="accueil">
+            <div class="hero-background">
+                <div class="hero-gradient"></div>
+                <div class="hero-grid"></div>
+                <div class="hero-particles" id="particles"></div>
+            </div>
+            
+            <div class="hero-content container">
+                <div class="hero-text">
+                    <div class="hero-badge" data-aos="fade-up">
+                        <span class="badge-icon">✦</span>
+                        <span>Agence Web Créative</span>
+                    </div>
+                    
+                    <h1 class="hero-title" data-aos="fade-up" data-aos-delay="100">
+                        <span class="title-line">
+                            <span class="title-vix">Vix</span>
+                            <span class="title-studio">Studio Web</span>
+                        </span>
+                        <span class="title-tagline">Créons ensemble votre</span>
+                        <span class="title-highlight">présence digitale</span>
+                    </h1>
+                    
+                    <p class="hero-description" data-aos="fade-up" data-aos-delay="200">
+                        Nous concevons des sites web <strong>modernes</strong>, <strong>performants</strong> et <strong>accessibles</strong> 
+                        qui transforment vos visiteurs en clients. Spécialistes de l'expérience mobile-first.
+                    </p>
+                    
+                    <div class="hero-cta" data-aos="fade-up" data-aos-delay="300">
+                        <a href="contact.html" class="btn btn-primary">
+                            <span>Démarrer mon projet</span>
+                            <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                        <a href="#portfolio" class="btn btn-secondary">
+                            <span>Voir nos réalisations</span>
+                        </a>
+                    </div>
+                    
+                    <div class="hero-stats" data-aos="fade-up" data-aos-delay="400">
+                        <div class="stat">
+                            <span class="stat-number" data-count="2">0</span>
+                            <span class="stat-label">Projets réalisés</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-count="100">0</span>
+                            <span class="stat-suffix">%</span>
+                            <span class="stat-label">Clients satisfaits</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-visual" data-aos="fade-left" data-aos-delay="200">
+                    <div class="hero-phone">
+                        <div class="phone-frame">
+                            <div class="phone-notch"></div>
+                            <div class="phone-screen">
+                                <div class="phone-content">
+                                    <div class="phone-header"></div>
+                                    <div class="phone-hero-block"></div>
+                                    <div class="phone-text-block"></div>
+                                    <div class="phone-text-block short"></div>
+                                    <div class="phone-cards">
+                                        <div class="phone-card"></div>
+                                        <div class="phone-card"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="phone-glow"></div>
+                    </div>
+                    
+                    <div class="floating-elements">
+                        <div class="floating-card card-1">
+                            <div class="card-icon">📱</div>
+                            <span>Mobile-First</span>
+                        </div>
+                        <div class="floating-card card-2">
+                            <div class="card-icon">🎨</div>
+                            <span>Design Unique</span>
+                        </div>
+                        <div class="floating-card card-3">
+                            <div class="card-icon">⚡</div>
+                            <span>Performance</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-scroll">
+                <a href="#services" class="scroll-indicator">
+                    <span class="scroll-text">Découvrir</span>
+                    <div class="scroll-line">
+                        <div class="scroll-dot"></div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services" id="services">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-tag">Nos Services</span>
+                    <h2 class="section-title">
+                        Des solutions <span class="highlight">sur mesure</span> pour votre succès digital
+                    </h2>
+                    <p class="section-description">
+                        De la conception à la mise en ligne, nous vous accompagnons dans toutes les étapes 
+                        de votre projet web avec expertise et passion.
+                    </p>
+                </div>
+                
+                <div class="services-grid">
+                    <article class="service-card" data-aos="fade-up" data-aos-delay="0">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 64 64" fill="none">
+                                <circle cx="32" cy="32" r="28" stroke="currentColor" stroke-width="2"/>
+                                <path d="M20 32L28 40L44 24" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="service-title">Création de Sites Web</h3>
+                        <p class="service-description">
+                            Sites vitrines, e-commerce ou applications web sur mesure. 
+                            Nous créons des expériences digitales uniques qui reflètent votre identité.
+                        </p>
+                        <ul class="service-features">
+                            <li>Design personnalisé</li>
+                            <li>Responsive design</li>
+                            <li>Optimisation SEO</li>
+                        </ul>
+                        <a href="contact.html" class="service-link">
+                            <span>En savoir plus</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </article>
+                    
+                    <article class="service-card featured" data-aos="fade-up" data-aos-delay="100">
+                        <div class="service-badge">Populaire</div>
+                        <div class="service-icon">
+                            <svg viewBox="0 0 64 64" fill="none">
+                                <rect x="8" y="12" width="48" height="40" rx="4" stroke="currentColor" stroke-width="2"/>
+                                <rect x="16" y="20" width="32" height="20" rx="2" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="32" cy="46" r="2" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <h3 class="service-title">Refonte & Modernisation</h3>
+                        <p class="service-description">
+                            Donnez un nouveau souffle à votre site existant. Nous modernisons 
+                            le design, améliorons les performances et l'expérience utilisateur.
+                        </p>
+                        <ul class="service-features">
+                            <li>Audit complet</li>
+                            <li>Nouvelle identité visuelle</li>
+                            <li>Migration sécurisée</li>
+                        </ul>
+                        <a href="contact.html" class="service-link">
+                            <span>En savoir plus</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </article>
+                    
+                    <article class="service-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 64 64" fill="none">
+                                <rect x="20" y="8" width="24" height="48" rx="4" stroke="currentColor" stroke-width="2"/>
+                                <line x1="20" y1="16" x2="44" y2="16" stroke="currentColor" stroke-width="2"/>
+                                <line x1="20" y1="48" x2="44" y2="48" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="32" cy="52" r="2" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <h3 class="service-title">Optimisation Mobile</h3>
+                        <p class="service-description">
+                            Plus de 60% du trafic web vient du mobile. Nous optimisons 
+                            chaque pixel pour une expérience parfaite sur tous les écrans.
+                        </p>
+                        <ul class="service-features">
+                            <li>Mobile-first design</li>
+                            <li>Temps de chargement optimal</li>
+                            <li>Navigation intuitive</li>
+                        </ul>
+                        <a href="contact.html" class="service-link">
+                            <span>En savoir plus</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </article>
+                    
+                    <article class="service-card" data-aos="fade-up" data-aos-delay="0">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 64 64" fill="none">
+                                <path d="M32 8L56 20V44L32 56L8 44V20L32 8Z" stroke="currentColor" stroke-width="2"/>
+                                <path d="M32 56V32M32 32L8 20M32 32L56 20" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3 class="service-title">UI/UX Design</h3>
+                        <p class="service-description">
+                            Des interfaces intuitives et esthétiques qui guident vos utilisateurs 
+                            vers leurs objectifs tout en renforçant votre image de marque.
+                        </p>
+                        <ul class="service-features">
+                            <li>Wireframes & prototypes</li>
+                            <li>Tests utilisateurs</li>
+                            <li>Design system</li>
+                        </ul>
+                        <a href="contact.html" class="service-link">
+                            <span>En savoir plus</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </article>
+                    
+                    <article class="service-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 64 64" fill="none">
+                                <circle cx="32" cy="32" r="24" stroke="currentColor" stroke-width="2"/>
+                                <path d="M32 16V32L44 40" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="service-title">Performance & Sécurité</h3>
+                        <p class="service-description">
+                            Sites ultra-rapides et sécurisés. Nous optimisons chaque aspect 
+                            technique pour des performances maximales et une sécurité sans faille.
+                        </p>
+                        <ul class="service-features">
+                            <li>Optimisation vitesse</li>
+                            <li>Certificats SSL</li>
+                            <li>Protection avancée</li>
+                        </ul>
+                        <a href="contact.html" class="service-link">
+                            <span>En savoir plus</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </article>
+                    
+                    <article class="service-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 64 64" fill="none">
+                                <circle cx="24" cy="24" r="8" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="40" cy="40" r="8" stroke="currentColor" stroke-width="2"/>
+                                <path d="M30 30L34 34" stroke="currentColor" stroke-width="2"/>
+                                <path d="M16 40C12 36 12 28 16 24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M48 24C52 28 52 36 48 40" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="service-title">Accessibilité Web</h3>
+                        <p class="service-description">
+                            Des sites accessibles à tous. Nous respectons les normes WCAG 
+                            pour que votre contenu soit disponible pour chaque visiteur.
+                        </p>
+                        <ul class="service-features">
+                            <li>Conformité WCAG 2.1</li>
+                            <li>Navigation clavier</li>
+                            <li>Lecteurs d'écran</li>
+                        </ul>
+                        <a href="contact.html" class="service-link">
+                            <span>En savoir plus</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mobile Focus Section -->
+        <section class="mobile-focus" id="mobile">
+            <div class="container">
+                <div class="mobile-focus-grid">
+                    <div class="mobile-focus-content" data-aos="fade-right">
+                        <span class="section-tag">Focus Mobile</span>
+                        <h2 class="section-title">
+                            Le mobile au <span class="highlight">cœur</span> de notre approche
+                        </h2>
+                        <p class="section-description">
+                            Dans un monde où plus de 60% des utilisateurs naviguent sur mobile, 
+                            nous plaçons l'expérience smartphone au centre de chaque projet.
+                        </p>
+                        
+                        <div class="mobile-features">
+                            <div class="mobile-feature">
+                                <div class="feature-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                                <div class="feature-content">
+                                    <h4>Chargement Ultra-Rapide</h4>
+                                    <p>Moins de 3 secondes pour captiver vos visiteurs</p>
+                                </div>
+                            </div>
+                            
+                            <div class="mobile-feature">
+                                <div class="feature-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke-width="2"/>
+                                    </svg>
+                                </div>
+                                <div class="feature-content">
+                                    <h4>Navigation Tactile</h4>
+                                    <p>Boutons et zones de clic optimisés pour le doigt</p>
+                                </div>
+                            </div>
+                            
+                            <div class="mobile-feature">
+                                <div class="feature-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <rect x="5" y="2" width="14" height="20" rx="2" stroke-width="2"/>
+                                        <line x1="12" y1="18" x2="12" y2="18" stroke-width="2" stroke-linecap="round"/>
+                                    </svg>
+                                </div>
+                                <div class="feature-content">
+                                    <h4>Design Adaptatif</h4>
+                                    <p>Parfait sur tous les appareils et orientations</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mobile-focus-visual" data-aos="fade-left">
+                        <div class="device-showcase">
+                            <div class="device tablet">
+                                <div class="device-screen">
+                                    <div class="screen-content">
+                                        <div class="content-header"></div>
+                                        <div class="content-grid">
+                                            <div class="content-card"></div>
+                                            <div class="content-card"></div>
+                                            <div class="content-card"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="device phone">
+                                <div class="device-notch"></div>
+                                <div class="device-screen">
+                                    <div class="screen-content">
+                                        <div class="content-header"></div>
+                                        <div class="content-hero"></div>
+                                        <div class="content-text"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section class="portfolio" id="portfolio">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-tag">Portfolio</span>
+                    <h2 class="section-title">
+                        Nos <span class="highlight">réalisations</span>
+                    </h2>
+                    <p class="section-description">
+                        Découvrez quelques-uns de nos projets récents et laissez-vous inspirer 
+                        pour votre future présence en ligne.
+                    </p>
+                </div>
+                
+                <div class="portfolio-grid" id="portfolio-grid">
+                    <!-- Portfolio Item 1 -->
+                    <article class="portfolio-item" data-aos="fade-up" data-category="vitrine">
+                        <div class="portfolio-image">
+                            <div class="portfolio-placeholder" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                                <span class="placeholder-text">La Course des Babets</span>
+                            </div>
+                            <div class="portfolio-overlay">
+                                <div class="overlay-content">
+                                    <span class="portfolio-category">Site Événementiel</span>
+                                    <h3 class="portfolio-title">La Course des Babets</h3>
+                                    <p class="portfolio-description">
+                                        Site vitrine pour un événement sportif local. Design dynamique et inscription en ligne.
+                                    </p>
+                                    <div class="portfolio-actions">
+                                        <a href="https://lacoursedesbabets.fr" target="_blank" rel="noopener" class="portfolio-link">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                                <polyline points="15 3 21 3 21 9"/>
+                                                <line x1="10" y1="14" x2="21" y2="3"/>
+                                            </svg>
+                                            <span>Visiter le site</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-tags">
+                            <span class="tag">HTML/CSS</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Responsive</span>
+                        </div>
+                    </article>
+                    
+                    <!-- Placeholder pour futurs projets -->
+                    <article class="portfolio-item portfolio-cta" data-aos="fade-up" data-aos-delay="100">
+                        <div class="portfolio-cta-content">
+                            <div class="cta-icon">
+                                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor">
+                                    <circle cx="32" cy="32" r="28" stroke-width="2" stroke-dasharray="8 4"/>
+                                    <path d="M32 20v24M20 32h24" stroke-width="3" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                            <h3>Votre projet ici ?</h3>
+                            <p>Rejoignez nos clients satisfaits et donnez vie à votre vision digitale.</p>
+                            <a href="contact.html" class="btn btn-primary">
+                                <span>Démarrer maintenant</span>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Processus Section -->
+        <section class="process" id="processus">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-tag">Notre Processus</span>
+                    <h2 class="section-title">
+                        De l'idée à la <span class="highlight">réalité</span>
+                    </h2>
+                    <p class="section-description">
+                        Un processus clair et transparent pour transformer votre vision en un site web performant.
+                    </p>
+                </div>
+                
+                <div class="process-timeline">
+                    <div class="timeline-line"></div>
+                    
+                    <div class="process-step" data-aos="fade-right">
+                        <div class="step-number">01</div>
+                        <div class="step-content">
+                            <div class="step-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <h3>Découverte & Échange</h3>
+                            <p>Nous discutons de votre projet, vos objectifs et votre vision. Cette étape nous permet de comprendre parfaitement vos besoins.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="process-step" data-aos="fade-left">
+                        <div class="step-number">02</div>
+                        <div class="step-content">
+                            <div class="step-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M12 19l7-7 3 3-7 7-3-3z" stroke-width="2"/>
+                                    <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z" stroke-width="2"/>
+                                    <path d="M2 2l7.586 7.586" stroke-width="2"/>
+                                    <circle cx="11" cy="11" r="2" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <h3>Conception & Design</h3>
+                            <p>Création des maquettes et du design. Nous vous présentons plusieurs propositions visuelles pour définir l'identité de votre site.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="process-step" data-aos="fade-right">
+                        <div class="step-number">03</div>
+                        <div class="step-content">
+                            <div class="step-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <polyline points="16 18 22 12 16 6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <polyline points="8 6 2 12 8 18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <h3>Développement</h3>
+                            <p>Nos développeurs donnent vie à votre projet avec des technologies modernes et des bonnes pratiques pour un résultat optimal.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="process-step" data-aos="fade-left">
+                        <div class="step-number">04</div>
+                        <div class="step-content">
+                            <div class="step-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" stroke-width="2"/>
+                                    <polyline points="22 4 12 14.01 9 11.01" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <h3>Tests & Lancement</h3>
+                            <p>Tests rigoureux sur tous les appareils, optimisations finales et mise en ligne. Nous vous formons à la gestion de votre nouveau site.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials / Trust Section -->
+        <section class="trust" id="confiance">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-tag">Ils nous font confiance</span>
+                    <h2 class="section-title">
+                        Ce que disent nos <span class="highlight">clients</span>
+                    </h2>
+                </div>
+                
+                <div class="trust-content">
+                    <div class="testimonials-slider" data-aos="fade-up">
+                        <div class="testimonial active">
+                            <div class="testimonial-content">
+                                <div class="testimonial-quote">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                                    </svg>
+                                </div>
+                                <p class="testimonial-text">
+                                    "Une équipe professionnelle et à l'écoute. Notre nouveau site a transformé 
+                                    notre présence en ligne et nous recevons des retours très positifs de nos clients."
+                                </p>
+                                <div class="testimonial-author">
+                                    <div class="author-avatar">
+                                        <span>CB</span>
+                                    </div>
+                                    <div class="author-info">
+                                        <strong>Client Babets</strong>
+                                        <span>La Course des Babets</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="trust-badges" data-aos="fade-up" data-aos-delay="200">
+                    <div class="trust-badge">
+                        <div class="badge-icon">🔒</div>
+                        <span>Sites Sécurisés</span>
+                    </div>
+                    <div class="trust-badge">
+                        <div class="badge-icon">📱</div>
+                        <span>100% Responsive</span>
+                    </div>
+                    <div class="trust-badge">
+                        <div class="badge-icon">⚡</div>
+                        <span>Performances A+</span>
+                    </div>
+                    <div class="trust-badge">
+                        <div class="badge-icon">♿</div>
+                        <span>Accessibilité</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="cta-background">
+                <div class="cta-pattern"></div>
+            </div>
+            <div class="container">
+                <div class="cta-content" data-aos="zoom-in">
+                    <h2 class="cta-title">
+                        Prêt à transformer votre <span class="highlight">présence digitale</span> ?
+                    </h2>
+                    <p class="cta-description">
+                        Discutons de votre projet et créons ensemble le site web qui fera la différence.
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="contact.html" class="btn btn-primary btn-large">
+                            <span>Démarrer mon projet</span>
+                            <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                        <a href="equipe.html" class="btn btn-outline btn-large">
+                            <span>Découvrir l'équipe</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="footer-logo">
+                        <span class="logo-vix">Vix</span>
+                        <span class="logo-studio">Studio Web</span>
+                    </a>
+                    <p class="footer-description">
+                        Agence web créative spécialisée dans la création de sites web 
+                        modernes, performants et accessibles.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="#accueil">Accueil</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Réalisations</a></li>
+                        <li><a href="#processus">Processus</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="contact.html">Création de site</a></li>
+                        <li><a href="contact.html">Refonte de site</a></li>
+                        <li><a href="contact.html">Optimisation mobile</a></li>
+                        <li><a href="contact.html">UI/UX Design</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="equipe.html">Notre équipe</a></li>
+                        <li><a href="contact.html">Nous contacter</a></li>
+                        <li><a href="contact.html">Devis gratuit</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 <strong>Vix</strong> Studio Web. Tous droits réservés.</p>
+                <div class="footer-legal">
+                    <a href="#">Mentions légales</a>
+                    <a href="#">Politique de confidentialité</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>

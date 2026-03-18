@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Inter Font Import ─── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+/* ─── Base Styles ─── */
+:root {
+  --vix-black: #0B0B0F;
+  --vix-anthracite: #1A1A22;
+  --vix-carbon: #12121A;
+  --vix-gold: #D4AF37;
+  --vix-gold-light: #E8C84A;
+  --vix-white: #F5F5F5;
+  --vix-gray: #8A8A9A;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--vix-black);
+  color: var(--vix-white);
+  font-family: 'Inter', system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+/* ─── Selection ─── */
+::selection {
+  background-color: rgba(212, 175, 55, 0.3);
+  color: var(--vix-white);
+}
+
+/* ─── Scrollbar ─── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--vix-black);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(212, 175, 55, 0.3);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--vix-gold);
+}
+
+/* ─── Utility Classes ─── */
+@layer utilities {
+  .text-gradient-gold {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, #D4AF37 0%, #E8C84A 50%, #D4AF37 100%);
+  }
+
+  .border-gold-subtle {
+    border-color: rgba(212, 175, 55, 0.15);
+  }
+
+  .bg-glass {
+    background: rgba(26, 26, 34, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+
+  .glow-gold {
+    box-shadow: 0 0 30px rgba(212, 175, 55, 0.15);
+  }
+
+  .glow-gold-strong {
+    box-shadow: 0 0 60px rgba(212, 175, 55, 0.25), 0 0 120px rgba(212, 175, 55, 0.1);
+  }
+
+  .line-gold {
+    @apply h-px bg-gradient-to-r from-transparent via-vix-gold/30 to-transparent;
+  }
+}
+
+/* ─── Section Spacing ─── */
+.section-padding {
+  @apply py-24 md:py-32 lg:py-40;
+}
+
+.container-vix {
+  @apply max-w-7xl mx-auto px-6 md:px-8 lg:px-12;
+}

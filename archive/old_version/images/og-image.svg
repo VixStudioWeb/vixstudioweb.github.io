@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0A0A0A"/>
+      <stop offset="100%" style="stop-color:#1A1A1A"/>
+    </linearGradient>
+    <linearGradient id="vixGradientOG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD93D"/>
+      <stop offset="50%" style="stop-color:#F5C518"/>
+      <stop offset="100%" style="stop-color:#D4A817"/>
+    </linearGradient>
+    <radialGradient id="glowGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#F5C518;stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:#F5C518;stop-opacity:0"/>
+    </radialGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGradient)"/>
+  
+  <!-- Glow effect -->
+  <ellipse cx="600" cy="280" rx="400" ry="200" fill="url(#glowGradient)"/>
+  
+  <!-- Grid pattern -->
+  <g opacity="0.05" stroke="#F5C518" stroke-width="1">
+    <line x1="0" y1="0" x2="0" y2="630"/>
+    <line x1="60" y1="0" x2="60" y2="630"/>
+    <line x1="120" y1="0" x2="120" y2="630"/>
+    <line x1="180" y1="0" x2="180" y2="630"/>
+    <line x1="240" y1="0" x2="240" y2="630"/>
+    <line x1="300" y1="0" x2="300" y2="630"/>
+    <line x1="360" y1="0" x2="360" y2="630"/>
+    <line x1="420" y1="0" x2="420" y2="630"/>
+    <line x1="480" y1="0" x2="480" y2="630"/>
+    <line x1="540" y1="0" x2="540" y2="630"/>
+    <line x1="600" y1="0" x2="600" y2="630"/>
+    <line x1="660" y1="0" x2="660" y2="630"/>
+    <line x1="720" y1="0" x2="720" y2="630"/>
+    <line x1="780" y1="0" x2="780" y2="630"/>
+    <line x1="840" y1="0" x2="840" y2="630"/>
+    <line x1="900" y1="0" x2="900" y2="630"/>
+    <line x1="960" y1="0" x2="960" y2="630"/>
+    <line x1="1020" y1="0" x2="1020" y2="630"/>
+    <line x1="1080" y1="0" x2="1080" y2="630"/>
+    <line x1="1140" y1="0" x2="1140" y2="630"/>
+    <line x1="1200" y1="0" x2="1200" y2="630"/>
+    <line x1="0" y1="60" x2="1200" y2="60"/>
+    <line x1="0" y1="120" x2="1200" y2="120"/>
+    <line x1="0" y1="180" x2="1200" y2="180"/>
+    <line x1="0" y1="240" x2="1200" y2="240"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="0" y1="360" x2="1200" y2="360"/>
+    <line x1="0" y1="420" x2="1200" y2="420"/>
+    <line x1="0" y1="480" x2="1200" y2="480"/>
+    <line x1="0" y1="540" x2="1200" y2="540"/>
+  </g>
+  
+  <!-- Logo -->
+  <text x="600" y="280" font-family="Georgia, Playfair Display, serif" font-size="120" font-weight="900" fill="url(#vixGradientOG)" text-anchor="middle">Vix</text>
+  <text x="600" y="340" font-family="Montserrat, Arial, sans-serif" font-size="36" font-weight="300" fill="#FFFFFF" text-anchor="middle" letter-spacing="8">STUDIO WEB</text>
+  
+  <!-- Tagline -->
+  <text x="600" y="420" font-family="Montserrat, Arial, sans-serif" font-size="24" fill="#888888" text-anchor="middle">Création de sites web professionnels</text>
+  
+  <!-- Decorative elements -->
+  <circle cx="300" cy="315" r="4" fill="#F5C518" opacity="0.6"/>
+  <circle cx="900" cy="315" r="4" fill="#F5C518" opacity="0.6"/>
+</svg>

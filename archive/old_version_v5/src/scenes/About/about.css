@@ -1,0 +1,214 @@
+.about-section {
+  position: relative;
+  background: var(--color-black);
+  padding: 120px 0 0;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.about-main-title {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 4rem;
+  align-items: center;
+  margin-bottom: 6rem;
+}
+
+.about-blocks {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.about-block {
+  position: relative;
+  padding: 2rem 2.5rem;
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  will-change: transform, opacity;
+  transition: border-color 0.4s var(--ease-out-expo),
+              box-shadow 0.4s var(--ease-out-expo);
+}
+
+.about-block:hover {
+  border-color: rgba(245, 197, 24, 0.3);
+  box-shadow: var(--glow-yellow);
+}
+
+.about-block-accent {
+  position: absolute;
+  left: 0;
+  top: 1.5rem;
+  bottom: 1.5rem;
+  width: 3px;
+  background: linear-gradient(to bottom, var(--color-yellow), transparent);
+  border-radius: 2px;
+}
+
+.about-block h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.75rem;
+  color: var(--color-yellow);
+}
+
+.about-block p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--color-gray-light);
+}
+
+/* Visual / Mascot */
+.about-visual {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-mascot {
+  position: relative;
+  z-index: 2;
+  will-change: transform;
+}
+
+.about-mascot img {
+  max-width: 350px;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 0 40px rgba(245, 197, 24, 0.15));
+  transition: filter 0.4s var(--ease-out-expo);
+}
+
+.about-mascot:hover img {
+  filter: drop-shadow(0 0 60px rgba(245, 197, 24, 0.3));
+}
+
+.about-glow-circle {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(245, 197, 24, 0.08) 0%, transparent 70%);
+  z-index: 1;
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}
+
+/* CTA section */
+.about-cta {
+  text-align: center;
+  padding: 4rem 0 6rem;
+  will-change: transform, opacity;
+}
+
+.cta-text {
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem) !important;
+  color: var(--color-white) !important;
+  margin-bottom: 2rem;
+  font-weight: 400 !important;
+}
+
+.cta-button {
+  font-size: 1.2rem;
+  padding: 1.2rem 3rem;
+}
+
+.cta-arrow {
+  display: inline-block;
+  transition: transform 0.3s var(--ease-out-expo);
+}
+
+.cta-button:hover .cta-arrow {
+  transform: translateX(6px);
+}
+
+/* Footer */
+.site-footer {
+  border-top: 1px solid rgba(245, 197, 24, 0.1);
+  padding: 3rem 5vw;
+  background: var(--color-black-deep);
+}
+
+.footer-inner {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.footer-logo img {
+  height: 40px;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+
+.footer-logo:hover img {
+  opacity: 1;
+}
+
+.footer-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.footer-links a {
+  font-size: 0.9rem;
+  color: var(--color-gray);
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: var(--color-yellow);
+}
+
+.footer-copy {
+  font-size: 0.8rem;
+  color: var(--color-gray-dark);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .about-visual {
+    order: -1;
+  }
+
+  .about-mascot img {
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    padding: 80px 0 0;
+  }
+
+  .footer-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+}
